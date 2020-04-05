@@ -1,0 +1,9 @@
+<h1> Show Template!</h1>
+
+<h3><%= campground.name%> </h3>
+<img src="<%= campground.url %>" height="200">
+<p><%= campground.description %></p>
+<div><% campground.comments.forEach(function(comment){ %>
+<span> <%= comment.text%> </span>
+<span> by <b> <%= comment.author %> </b></span>
+<% }); %> </div>
