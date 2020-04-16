@@ -1,0 +1,26 @@
+<%- include("../partials/header") -%>
+<form method="POST" action="/camps/<%= camp._id %>?_method=PUT">
+
+
+    <div class="d-flex flex-column justify-content-center align-items-center text-center" style="height:100vh;">
+        <h4>Edit <%= camp.name %></h4>
+        <div class="form-group">
+            <label for="name">Camp Name</label>
+            <input type="text" class="form-control" name="camp[name]" id="name" required value="<%= camp.name %>">
+        </div>
+        <div class="form-group">
+            <label for="url">Camp Image URL</label>
+            <input type="text" class="form-control" name="camo[url]" id="url" required value="<%= camp.url %>">
+        </div>
+        <div class="form-group">
+            <label for="desc">Camp Description</label>
+            <input type="text" class="form-control" name="camp[description]"" id="desc" required value="<%= camp.description %>">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="form-control btn btn-lg btn-primary">
+        </div>
+    </div>
+    </div>
+</form>
+
+<%- include("../partials/footer") -%>
